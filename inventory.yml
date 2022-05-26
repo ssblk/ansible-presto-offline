@@ -1,0 +1,9 @@
+all:
+  hosts:
+    machine1:
+     ansible_user: root
+     ansible_host: 192.168.56.104
+
+    machine2:
+     ansible_user: root
+     ansbile_host: 192.168.56.105

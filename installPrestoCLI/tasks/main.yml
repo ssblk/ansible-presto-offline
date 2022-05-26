@@ -1,0 +1,17 @@
+---
+# tasks file for installPrestoCLI
+  - name: copy le jar
+    copy:
+     src: presto-cli-0.272-executable.jar
+     dest: /root
+     owner: root
+     group: root
+     mode: u=rwX,g=rX,o=rX
+
+  - name: deplacer le jar dans un dossier prestocli
+    command : 'mv presto-cli-0.272-executable.jar prestocli'
+
+  - name: le rendre executable
+    file:
+      dest: /root/prestocli
+      mode: a+x
